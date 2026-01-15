@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère cipher</title>
+    <link rel="icon" href="encryption.png">
+    <link rel="stylesheet" href="cipher.css">
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="back-ani">
+ <span class="onze">10111010010000110011000110100100110011111110000100011101111111110001100100010111</span>
+ <span class="onze">01000111011101011000101010011010100101001010111100111011001110011000010000001010</span>
+ <span class="onze">10000101111000100100000001110000110010000101010101010001101000100001000011011100</span>
+ <span class="onze">10110001011101100110101010001011111111001100001100010110001111101000111001010111</span>
+ <span class="onze">11011010110110010110000010001110001010111010110001001000110001101001000101011001</span>
+ <span class="onze">11100101010101000010000001101110111111100011100001101110011101110101000001010100</span>
+ <span class="onze">01001101110110000001101000011011111010101111100101001000010011100010001001000000</span>
+ <span class="onze">00101000000011011111010100001011000110010111001000101010000111011100011110101110</span>
+ <span class="onze">00100001011101100110100000001110011100101001010011010010110100110011101100101111</span>
+ <span class="onze">10011111011010110100010011001111110100000000110010101101111010110011011110111101</span>
+ <span class="onze">01101011110011010010010000001000011010101110101011000110111011111001000001010110</span>
+ <span class="onze">00100101100111101001011000000100110101100000100111101110011100010000110000011000</span>
+ <span class="onze">00001111101110011001100101100011101100100000101110110010011110001100101000101010</span>
+ <span class="onze">10101010110100100101010001011100011110100111100010010011111010100110110100000111</span>
+ <span class="onze">10110000011100111000000110000100010000000100101111101011100111110110011010011100</span>
+ <span class="onze">10100111000100111111011010000100001110100100101010101010011101011011110000001010</span>
+ <span class="onze">00011001001011110101100000000011001101000001101100001101011101100111101011100101</span>
+ <span class="onze">00010111010110010001111010100101110001010010111111011000010110110011010111010001</span> 
+</div> 
+<div class="content">
+
+ <h6> Vigenère Cipher </h6>
+ <h2> Ensure your files in safe hands </h2>   
+
+<a href="cipher.html" target="_self"><button id="start"> Start</button></a>
+
+</div>   
+    
+</body>
+
+<script>
+const lines = document.querySelectorAll('#back-ani .onze');
+
+function flickerGlow() {
+  lines.forEach(line => {
+    const chars = line.textContent.split('');
+
+    // remove previous glow
+    line.innerHTML = chars.map(c => `<span class="onze">${c}</span>`).join('');
+
+    // pick 5 new random positions to glow
+    const glowIndexes = [];
+    while (glowIndexes.length < 5) {
+      const pos = Math.floor(Math.random() * chars.length);
+      if (!glowIndexes.includes(pos)) glowIndexes.push(pos);
+    }
+
+    // add glow to selected characters
+    const newHTML = chars.map((c, i) => {
+      if (glowIndexes.includes(i)) {
+        return `<span class="onze" id="glow">${c}</span>`;
+      } else {
+        return `<span class="onze">${c}</span>`;
+      }
+    }).join('');
+
+    line.innerHTML = newHTML;
+  });
+}
+
+// start the flicker loop
+setInterval(flickerGlow, 800);
+</script>
+
+
+</html>
