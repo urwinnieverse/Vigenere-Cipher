@@ -333,10 +333,16 @@ input[type="text"] {
 
   #start {
     width: 100%;
-    max-width: 50%;
+    max-width: 90%;
     height: 3rem;
     font-size: 1.4rem;
   }
+
+   #startbut{
+    width: 100%;
+    min-width: 90%;
+
+  }  
 
   /* Page 2 title */
   h1 {
@@ -394,5 +400,6 @@ input[type="text"] {
     border-radius: 1.5rem;
   }
 }
+
 
 
