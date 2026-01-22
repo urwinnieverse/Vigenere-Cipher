@@ -333,7 +333,7 @@ input[type="text"] {
 
   #start {
     width: 100%;
-    max-width: 18rem;
+    max-width: 30rem;
     height: 3rem;
     font-size: 1.4rem;
   }
@@ -347,7 +347,7 @@ input[type="text"] {
   /* Encrypt / Decrypt buttons */
   #process {
     width: 100%;
-    max-width: 90%;
+    max-width: 91%;
     flex-direction: row;
   }
 
@@ -394,3 +394,4 @@ input[type="text"] {
     border-radius: 1.5rem;
   }
 }
+
