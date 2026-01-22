@@ -1,3 +1,6 @@
+
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -55,11 +58,10 @@ h6 {
 h2{
 
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0px;  
     text-wrap: none; 
     margin-bottom: 1.5rem;
-    font-family: monospace;
 }
 
 #start {
@@ -72,7 +74,6 @@ h2{
     border-radius: 1rem;
     background: linear-gradient(0deg, rgba(1, 84, 22,0.5) 0%, rgba(1, 84, 22, 0.25) 100%);
     cursor: pointer;
-    font-family: Agdasima;
 }
 
 #glow {
@@ -158,7 +159,6 @@ img{
     border-radius: 1rem 1rem 0rem 0rem;
     cursor: pointer;
     color: #024a02;
-    font-family: monospace;
 
 }
 
@@ -167,7 +167,6 @@ img{
 
     font-size: 2rem;
     cursor: pointer;
-    font-family: monospace;
 
 }
 
@@ -195,7 +194,6 @@ input[type="radio"] {
 
 #up {
     font-size: x-large;
-    font-family: monospace;
     color: white;
 }
 
@@ -210,7 +208,6 @@ input[type="radio"] {
 
 #keyy {
     font-size: x-large;
-    font-family: monospace;
     color: white;
 }
 
@@ -221,7 +218,6 @@ input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #024a02;
-    font-family: monospace;
     color: #024a02;
 }
 
@@ -241,7 +237,6 @@ input[type="text"] {
 
 ::placeholder {
     color: #024a02;
-    font-family: monospace;
     font-size: medium;
 }
 
@@ -251,7 +246,6 @@ input[type="text"] {
     align-self: center;
     text-decoration: none;
     font-size: xx-large;
-    font-family: monospace;
     color: white;
     display: none;
 }
@@ -279,8 +273,7 @@ input[type="text"] {
     justify-items: left;
     align-content: left;
     margin: 0px;
-    gap:0.5rem;
-    padding: 20px;
+    padding: 0.7rem;
     border-radius: 3rem;
     text-align: center;
     width: 26rem;
@@ -290,8 +283,7 @@ input[type="text"] {
     text-wrap: wrap;
     color: #ffffff;
     text-align: left;
-    font-size: 1.1rem;
-    font-family: monospace;
+    font-size: 1.2rem;
 }
 
 /* Close button */
@@ -314,3 +306,91 @@ input[type="text"] {
 
 
 
+/* =========================
+   MOBILE FIXES
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 1rem;
+  }
+
+  /* Background numbers */
+  .onze {
+    font-size: 1rem;
+  }
+
+  /* Page 1 */
+  h6 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #start {
+    width: 100%;
+    max-width: 18rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
+  /* Page 2 title */
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  /* Encrypt / Decrypt buttons */
+  #process {
+    width: 100%;
+    max-width: 90%;
+    flex-direction: row;
+  }
+
+  .radios {
+    width: 100%;
+    border-style: solid solid none solid;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  /* Main container */
+  .container{
+    width: 80%;
+    max-width: 75%;
+    height: max-content;
+    padding: 1.5rem;
+  }
+
+  /* Inputs */
+  #fileInput,
+  #key {
+    width: 85%;
+    height: 50%;
+  }
+
+  input[type="file"],
+  input[type="text"] {
+    font-size: 1rem;
+  }
+
+  #downloadLink {
+    font-size: 1.4rem;
+  }
+
+  /* Popup */
+  .popup-content {
+    width: 80%;
+    max-width: 75%;
+    height: auto;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+  }
+}
